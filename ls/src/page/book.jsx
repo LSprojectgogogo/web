@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import * as S from "./book.style";
+import * as S from "../style/book.style";
 
 const BookSummary = ({ book }) => {
   const [voices, setVoices] = useState([]);
@@ -55,8 +55,8 @@ const BookSummary = ({ book }) => {
     <S.BoxContainer>
       <S.BookSummaryContainer>
         <S.Title>{book.title}</S.Title>
-        <S.ptag>{book.summary}</S.ptag>
-        <S.Button onClick={() => speech(book.summary)}>말하기</S.Button>
+        <S.ptag>{book.content}</S.ptag>
+        <S.Button onClick={() => speech(book.content)}>말하기</S.Button>
       </S.BookSummaryContainer>
     </S.BoxContainer>
   );
